@@ -2,9 +2,10 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {TodoList} from './TodoList';
+import {TodoApp} from './TodoApp';
 
 function App() {
-  const todos = [{text:"Learn React", priority:5, dueDate: new Date() },
+  const todos = [{text:"Learn React", priority:5, dueDate: new Date(2020,1,23) },
     {text:"Learn about APIs", priority:4, dueDate: new Date(2020,1,23) },
     {text:"write TODO App", priority:3, dueDate: new Date(2020,1,30) }];
  
@@ -23,8 +24,10 @@ function App() {
         >
           Learn React
         </a>
-        < TodoList  todoList = { todos } /> 
       </header>
+      <div>
+          <TodoApp lista={todos} />
+      </div>
     </div>
   );
 }
